@@ -4,6 +4,9 @@ System that allows a Pioneer robot to perform a Left Edge Following implementing
 ## Organization of the folders
 . It is impotant to mention the content of the following folders:
 - **Root** *All the code is given in the root folder. Also, this folder contains the training data set recollected from a Pioneer robot that performs a left-edge-following. This file has four columns (1º: Distance between the sensor zero of the robot and the wall, 2º Distance between the sensor 1 and the wall, 3º speed for the left wheel of the robot and 4º speed for the right wheel of the robot).*
+
+> "all_data1.txt! is not the original file. The original one occupied almost 50 MB. For real uses, gather new readings from the real robot.
+
 - **Files** *It gathers information about the performance of the final Neural Network. Illustrating the Error for every row in the training file in all the 20 "Epoch" in which the NN was trained, the Root Mean Square Error (RMSE) of each "Epoch" and storing the minimum RMSE next to its *optimal weights* the content generated in this folder is highly relevant in order to know which weights should be chosen.*
 - **Graphs** *It shows the graphs relating to the training, validation and test results. Quite useful for the stopping criteria.*
 
