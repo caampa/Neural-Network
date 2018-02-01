@@ -3,9 +3,9 @@ System that allows a Pioneer robot to perform a Left Edge Following implementing
 
 ## Organization of the folders
 All the code is given in the root folder. Also, it is impotant to mention the content of the following folders:
-- Dataset * It contains the training data set recollected from a Pioneer robot that performs a left-edge-following. This file has four columns (1º: Distance between the sensor zero of the robot and the wall, 2º Distance between the sensor 1 and the wall, 3º speed for the left wheel of the robot and 4º speed for the right wheel of the robot). *
-- Files * It gathers information about the performance of the final Neural Network. Ilustrating the Error for every row in the training file in all the 20 "Epoch" in which the NN was trained, the Root Mean Square Error (RMSE) of each "Epoch" and storing the minimun RMSE next to its *optimal weights* the content generated in this folder is highly relevant in order to know which weights should be chosen. *
-- Graphs * It shows the graphs relating to the training, validation and test results. Quite useful for the stopping criteria. *
+- Dataset *It contains the training data set recollected from a Pioneer robot that performs a left-edge-following. This file has four columns (1º: Distance between the sensor zero of the robot and the wall, 2º Distance between the sensor 1 and the wall, 3º speed for the left wheel of the robot and 4º speed for the right wheel of the robot).*
+- Files *It gathers information about the performance of the final Neural Network. Ilustrating the Error for every row in the training file in all the 20 "Epoch" in which the NN was trained, the Root Mean Square Error (RMSE) of each "Epoch" and storing the minimun RMSE next to its *optimal weights* the content generated in this folder is highly relevant in order to know which weights should be chosen.*
+- Graphs *It shows the graphs relating to the training, validation and test results. Quite useful for the stopping criteria.*
 
 ## Structure of the system
 The structure of the system can be seen in the ` NN_classdiagram.png ` image.
@@ -35,8 +35,9 @@ For the first part, the code below need to be uncommented from the ` NeuralNetwo
 	vector<double> min_rmse = minRMSE(train_rmse);
 	vector<double> min_val_rmse = minRMSE(val_rmse);
 	writeMinRMSE(min_rmse, min_val_rmse);
-  
-  ```
+	
+```
+
 In this part, the connection with the robot is not necessary yet. In addition, the training and validation files are specified in the ` trainNeuralNetwork ` and ` validateNeuralNetwork ` methods. Also, if those files are modified, it should be convenient to change the maximun and minimun distances and velocities in the method ` normalizeValues `.
 
 > It is very normal for this process to spend more than one hour of training. The number of "Epoch" and features of the computer will determinate it.
@@ -58,7 +59,8 @@ In this part, the connection with the robot is not necessary yet. In addition, t
 	Connection* w8 = new Connection("w8", 1.8398501908642131, h2); 
 	Connection* b2 = new Connection("b2", 0.60, bias2); 
   
-  ```
+```
+
 Then, the NN is ready. In the code below can be seen how the readings from the robot are integrated with the NN, how the NN is able to predict new speeds for both wheel using the two given distances obtained from the sensors zero and one.
 
 ```
@@ -85,5 +87,8 @@ while (true) {
 		/* ROBOT SETTING NEW SPEED */
 		robot.setVel2(left_wheel, right_wheel);
 	}
-  ```
+	
+```
+
+[Contribution guidelines for this project] Acknowledgments to Matt Mazur for given such as good example on how a Neural Network works available in (https://mattmazur.com/2015/03/17/a-step-by-step-backpropagation-example/)
   
