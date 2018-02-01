@@ -8,7 +8,7 @@ All the code is given in the root folder. Also, it is impotant to mention the co
 - Graphs *It shows the graphs relating to the training, validation and test results. Quite useful for the stopping criteria.*
 
 ## Structure of the system
-The structure of the system can be seen in the ` NN_classdiagram.png ` image. [Contribution guidelines for this project](./NN_classdiagram.png)
+The structure of the system can be seen in the [` NN_classdiagram.png `](./NN_classdiagram.png) image.
 
 Basically, this project has two different parts: the first one, in which a NN is built and trained and the second part, that allows to a Pioneer robot to use this NN already built in order to be capable to perform a left edge following.
 
