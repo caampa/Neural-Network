@@ -4,7 +4,7 @@ System that allows a Pioneer robot to perform a Left Edge Following implementing
 ## Organization of the folders
 All the code is given in the code folder. Also, it is impotant to mention the content of the following folders:
 - **Code** *It also contains the training data set recollected from a Pioneer robot that performs a left-edge-following. This file has four columns (1º: Distance between the sensor zero of the robot and the wall, 2º Distance between the sensor 1 and the wall, 3º speed for the left wheel of the robot and 4º speed for the right wheel of the robot).*
-- **Files** *It gathers information about the performance of the final Neural Network. Ilustrating the Error for every row in the training file in all the 20 "Epoch" in which the NN was trained, the Root Mean Square Error (RMSE) of each "Epoch" and storing the minimun RMSE next to its *optimal weights* the content generated in this folder is highly relevant in order to know which weights should be chosen.*
+- **Files** *It gathers information about the performance of the final Neural Network. Illustrating the Error for every row in the training file in all the 20 "Epoch" in which the NN was trained, the Root Mean Square Error (RMSE) of each "Epoch" and storing the minimum RMSE next to its *optimal weights* the content generated in this folder is highly relevant in order to know which weights should be chosen.*
 - **Graphs** *It shows the graphs relating to the training, validation and test results. Quite useful for the stopping criteria.*
 
 ## Structure of the system
@@ -38,7 +38,7 @@ For the first part, the code below need to be uncommented from the ` NeuralNetwo
 	
 ```
 
-In this part, the connection with the robot is not necessary yet. In addition, the training and validation files are specified in the ` trainNeuralNetwork ` and ` validateNeuralNetwork ` methods. Also, if those files are modified, it should be convenient to change the maximun and minimun distances and velocities in the method ` normalizeValues `.
+In this part, the connection with the robot is not necessary yet. In addition, the training and validation files are specified in the ` trainNeuralNetwork ` and ` validateNeuralNetwork ` methods. Also, if those files are modified, it should be convenient to change the maximun and minimum distances and velocities in the method ` normalizeValues `.
 
 > It is very normal for this process to spend more than one hour of training. The number of "Epoch" and features of the computer will determinate it.
 
