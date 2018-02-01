@@ -47,7 +47,7 @@ In this part, the connection with the robot is not necessary yet. In addition, t
  The method ` buildNeuralNetwork ` has the following code where they will be changed:
  
  ``` 
- 	/* Building ALL the connections between the neurons */
+ /* Building ALL the connections between the neurons */
 	Connection* w1 = new Connection("w1", -4.240379588625, i1); 
 	Connection* w2 = new Connection("w2", -0.15458900033383655, i2);
 	Connection* w3 = new Connection("w3", 2.4517917984212381, i1); 
